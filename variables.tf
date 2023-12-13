@@ -56,3 +56,46 @@ variable "ssh_location" {
     description = "ip address that can ssh into the servers"
     type        = string
 }
+
+# rds variables
+variable "database_snapshot_identifier" {
+    description = "database snapshot name"
+    type        = string
+}
+
+variable "database_instance_class" {
+    description = "database instance type"
+    type        = string
+}
+
+variable "database_instance_identifier" {
+    description = "database instance identifier"
+    type        = string
+}
+
+variable "multi_az_deployment" {
+    description = "create a standby db instance"
+    type        = bool
+}
+
+# acm variables
+variable "domain_name" {
+    description = "domain name"
+    type        = string
+}
+
+variable "alternative_names" {
+    description = "sub domain name"
+    type        = string
+}
+
+# s3 variables
+variable "env_file_bucket_name" {
+    description = "s3 bucket name"
+    type        = string
+}
+
+variable "env_file_name" {
+    description = "env file name"
+    type        = string
+}
